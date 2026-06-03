@@ -16,20 +16,18 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
     <style>
-    /* Main Container */
+
         .container {
-            position: fixed;
-            left: 50%;
-            top: 15%;
-            transform: translateX(-50%);
-            width: 30%;
+            /* width: 400px; */
+            position: relative;
+            margin: 6% auto 0;
+            width: min(30%, 520px);
             padding: 15px;
             background: white;
             border-radius: 12px;
-            box-shadow: 0 20px 40px rgba(10, 10, 10, 0.6);
+            box-shadow: 0 20px 40px rgba(10, 10, 10, 0.15);
         }
 
-        /* Image Wrapper */
         .img {
             position: relative;
             width: 100%;
@@ -53,7 +51,6 @@
             transform: scale(0.95);
         }
 
-        /* Download Button */
         .download {
             display: none;
             position: absolute;
@@ -78,6 +75,22 @@
         .download:hover {
             background-color: #0056b3;
             transform: translateX(-50%) scale(1.08);
+        }
+
+        @media (max-width: 600px) {
+
+            .container {
+                width: min(90%, 520px);
+                margin-top: 30%;
+                padding: 12px;
+            }
+
+            .download {
+                display: block;
+                top: 80%;
+                padding: 10px 18px;
+                font-size: 0.95rem;
+            }
         }
     </style>
 </head>
